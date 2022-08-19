@@ -1,0 +1,105 @@
+.main {
+    text-align: center;
+    background-color: #d5eeff;
+    padding: 1px 0;
+    overflow: hidden;
+}
+
+.main__heading {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #0e0220;
+    text-transform: capitalize;
+    margin: 12px 0 60px;
+}
+
+.lesson {
+    border: 1px solid transparent;
+    margin: 30px auto;
+    user-select: none;
+    cursor: pointer;
+    text-align-last: left;
+    perspective: 1500px;
+}
+
+.lesson__container {
+    transform-style: preserve-3d;
+}
+
+.lesson__lecture {
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 100;
+    transition: 1s;
+}
+
+.lesson__container::after,
+.lesson__container::before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    display: block;
+}
+
+.lesson__container:hover .lesson__lecture {
+    transform: rotateY(180deg);
+}
+
+.lesson__container:hover::before {
+    top: 0;
+    bottom: 0px;
+    left: -500px;
+    right: 100%;
+}
+
+.lesson__container:hover::after {
+    top: 0;
+    bottom: 0px;
+    left: 100%;
+    right: -500px;
+}
+
+.lession__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    background-color: rgba(255 255 255 /.9);
+}
+
+.lesson__heading {
+    width: fit-content;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.lesson__heading:hover {
+    color: #1b435d;
+}
+
+.lesson__notes {
+    font-style: italic;
+    font-size: 1.8rem;
+    margin: 18px 0;
+}
+
+
+/* Lesson video */
+
+.lesson__video-container {
+    transform: rotateY(180deg);
+    z-index: 20;
+}
+
+@keyframes rotateCard {
+    from {
+        transform: rotateY(0);
+    }
+    to {}
+}
