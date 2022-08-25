@@ -19,3 +19,7 @@ html {
 .row {
     margin: 0 -12px;
 }
+
+.mb-32 {
+    margin-bottom: 32px;
+}

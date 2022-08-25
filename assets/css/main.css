@@ -17,9 +17,18 @@
     border: 1px solid transparent;
     margin: 30px auto;
     user-select: none;
-    cursor: pointer;
+    cursor: default;
     text-align-last: left;
     perspective: 1500px;
+}
+
+.lesson:not(:last-child)::after {
+    content: attr(data-icon);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    font-size: 6.2rem;
 }
 
 .lesson__container {
